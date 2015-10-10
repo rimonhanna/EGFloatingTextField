@@ -303,12 +303,12 @@ public class EGFloatingTextField: UITextField {
             
             if self.validationType! == .Email {
                 
-                var isValid = self.emailValidationBlock(text: self.text, message: &message)
+                let isValid = self.emailValidationBlock(text: self.text!, message: &message)
                 
                 performValidation(isValid,message: message)
                 
             } else {
-                var isValid = self.numberValidationBlock(text: self.text, message: &message)
+                let isValid = self.numberValidationBlock(text: self.text!, message: &message)
                 
                 performValidation(isValid,message: message)
             }
