@@ -138,13 +138,13 @@ public class EGFloatingTextField: UITextField {
             self.showActiveBorder()
         }
         
-        self.active=flag
+        self.active = flag
         return flag
     }
     
     override public func resignFirstResponder() -> Bool {
         
-        let flag:Bool = super.becomeFirstResponder()
+        let flag:Bool = super.resignFirstResponder()
         
         if flag {
             
@@ -163,6 +163,7 @@ public class EGFloatingTextField: UITextField {
             self.showInactiveBorder()
             self.validate()
         }
+        
         self.active = flag
         return flag
         
