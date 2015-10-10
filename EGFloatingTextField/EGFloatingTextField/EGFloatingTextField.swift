@@ -121,7 +121,7 @@ public class EGFloatingTextField: UITextField {
         
         if flag {
             
-            if self.floatingLabel! {
+            if (self.floatingLabel != nil) {
                 
                 if !self.floating! || self.text!.isEmpty {
                     self.floatLabelToTop()
@@ -143,7 +143,7 @@ public class EGFloatingTextField: UITextField {
         
         if flag {
             
-            if self.floatingLabel! {
+            if (self.floatingLabel != nil) {
                 
                 if self.floating! && self.text!.isEmpty {
                     self.animateLabelBack()
