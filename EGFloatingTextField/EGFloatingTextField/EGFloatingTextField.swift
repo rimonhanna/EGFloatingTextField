@@ -13,18 +13,20 @@ import PureLayout
 public enum EGFloatingTextFieldValidationType {
     case Email
     case Number
+    case Custom
 }
 
 public class EGFloatingTextField: UITextField {
     
     
-    private typealias EGFloatingTextFieldValidationBlock = ((text:String,inout message:String)-> Bool)!
+    public typealias EGFloatingTextFieldValidationBlock = ((text:String,inout message:String)-> Bool)!
     
     public var validationType : EGFloatingTextFieldValidationType!
     
     
     private var emailValidationBlock  : EGFloatingTextFieldValidationBlock
     private var numberValidationBlock : EGFloatingTextFieldValidationBlock
+    public var customValidationBlock : EGFloatingTextFieldValidationBlock
     
     
     let kDefaultInactiveColor = UIColor(white: CGFloat(0), alpha: CGFloat(0.54))
@@ -57,7 +59,7 @@ public class EGFloatingTextField: UITextField {
         self.commonInit()
     }
     
-    func commonInit(){
+    func commonInit() {
         
         self.emailValidationBlock = ({(text:String, inout message: String) -> Bool in
             let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}"
@@ -81,6 +83,7 @@ public class EGFloatingTextField: UITextField {
             return isValid;
             
         })
+
         self.floating = false
         self.hasError = false
        
@@ -111,7 +114,8 @@ public class EGFloatingTextField: UITextField {
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("textDidChange:"), name: "UITextFieldTextDidChangeNotification", object: self)
     }
-    public func setPlaceHolder(placeholder:String){
+    
+    public func setPlaceHolder(placeholder:String) {
         self.label.text = placeholder
     }
     
@@ -137,6 +141,7 @@ public class EGFloatingTextField: UITextField {
         self.active=flag
         return flag
     }
+    
     override public func resignFirstResponder() -> Bool {
         
         let flag:Bool = super.becomeFirstResponder()
@@ -163,7 +168,7 @@ public class EGFloatingTextField: UITextField {
         
     }
     
-    override public func drawRect(rect: CGRect){
+    override public func drawRect(rect: CGRect) {
         super.drawRect(rect)
         
         let borderColor = self.hasError! ? kDefaultErrorColor : kDefaultInactiveColor
@@ -194,7 +199,7 @@ public class EGFloatingTextField: UITextField {
         }
     }
     
-    func textDidChange(notif: NSNotification){
+    func textDidChange(notif: NSNotification) {
         self.validate()
     }
     
@@ -221,6 +226,7 @@ public class EGFloatingTextField: UITextField {
         self.clipsToBounds = false
         CATransaction.commit()
     }
+    
     func showActiveBorder() {
         
         self.activeBorder.layer.transform = CATransform3DMakeScale(CGFloat(0.01), CGFloat(1.0), 1)
@@ -262,6 +268,7 @@ public class EGFloatingTextField: UITextField {
         self.label.layer.addAnimation(animGroup, forKey: "_animateLabelBack")
         CATransaction.commit()
     }
+    
     func showInactiveBorder() {
         
         CATransaction.begin()
@@ -280,7 +287,7 @@ public class EGFloatingTextField: UITextField {
         CATransaction.commit()
     }
     
-    func performValidation(isValid:Bool,message:String){
+    func performValidation(isValid:Bool,message:String) {
         if !isValid {
             self.hasError = true
             self.errorMessage = message
@@ -296,7 +303,7 @@ public class EGFloatingTextField: UITextField {
         }
     }
     
-    func validate(){
+    func validate() {
         
         if self.validationType != nil {
             var message : String = ""
@@ -304,12 +311,16 @@ public class EGFloatingTextField: UITextField {
             if self.validationType! == .Email {
                 
                 let isValid = self.emailValidationBlock(text: self.text!, message: &message)
-                
                 performValidation(isValid,message: message)
                 
-            } else {
-                let isValid = self.numberValidationBlock(text: self.text!, message: &message)
+            } else if self.validationType! == .Number {
                 
+                let isValid = self.numberValidationBlock(text: self.text!, message: &message)
+                performValidation(isValid,message: message)
+            }
+            else {
+                
+                let isValid = self.customValidationBlock(text: self.text!, message: &message)
                 performValidation(isValid,message: message)
             }
         }
