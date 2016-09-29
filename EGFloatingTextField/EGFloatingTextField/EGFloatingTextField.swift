@@ -301,7 +301,7 @@ open class EGFloatingTextField: UITextField {
         }
     }
     
-    open func performValidation(_ isValid:Bool,message:String) {
+    public func performValidation(_ isValid:Bool,message:String) {
         if !isValid {
             self.hasError = true
             self.errorMessage = message
@@ -317,8 +317,7 @@ open class EGFloatingTextField: UITextField {
         }
     }
     
-    open func validate() {
-        
+    func validate() {
         if self.validationType != nil {
             var message : String = ""
             
