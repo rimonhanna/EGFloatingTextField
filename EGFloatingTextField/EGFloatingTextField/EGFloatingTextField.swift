@@ -11,40 +11,40 @@ import PureLayout
 
 
 public enum EGFloatingTextFieldValidationType {
-    case Email
-    case Number
-    case Custom
+    case email
+    case number
+    case custom
 }
 
-public class EGFloatingTextField: UITextField {
+open class EGFloatingTextField: UITextField {
     
     
-    public typealias EGFloatingTextFieldValidationBlock = ((text:String,inout message:String)-> Bool)!
+    public typealias EGFloatingTextFieldValidationBlock = ((_ text:String,_ message:inout String)-> Bool)
     
-    public var validationType : EGFloatingTextFieldValidationType!
+    open var validationType : EGFloatingTextFieldValidationType?
     
     
-    private var emailValidationBlock  : EGFloatingTextFieldValidationBlock
-    private var numberValidationBlock : EGFloatingTextFieldValidationBlock
-    public var customValidationBlock : EGFloatingTextFieldValidationBlock
+    fileprivate var emailValidationBlock  : EGFloatingTextFieldValidationBlock?
+    fileprivate var numberValidationBlock : EGFloatingTextFieldValidationBlock?
+    open var customValidationBlock : EGFloatingTextFieldValidationBlock?
     
     
     let kDefaultInactiveColor = UIColor(white: CGFloat(0), alpha: CGFloat(0.54))
-    let kDefaultActiveColor = UIColor.blueColor()
-    let kDefaultErrorColor = UIColor.redColor()
+    let kDefaultActiveColor = UIColor.blue
+    let kDefaultErrorColor = UIColor.red
     let kDefaultLineHeight = CGFloat(22)
     let kDefaultLabelTextColor = UIColor(white: CGFloat(0), alpha: CGFloat(0.54))
     
     
-    public var floatingLabel : Bool!
-    var label : UILabel!
-    var labelFont : UIFont!
-    var labelTextColor : UIColor!
-    var activeBorder : UIView!
-    var floating : Bool!
-    var active : Bool!
-    var hasError : Bool!
-    var errorMessage : String!
+    open var floatingLabel : Bool?
+    var label : UILabel?
+    var labelFont : UIFont?
+    var labelTextColor : UIColor?
+    var activeBorder : UIView?
+    var floating : Bool?
+    var active : Bool?
+    var hasError : Bool?
+    var errorMessage : String?
     
     
     
@@ -61,22 +61,22 @@ public class EGFloatingTextField: UITextField {
     
     func commonInit() {
         
-        self.emailValidationBlock = ({(text:String, inout message: String) -> Bool in
+        self.emailValidationBlock = ({(text:String, message: inout String) -> Bool in
             let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}"
             
             let emailTest = NSPredicate(format:"SELF MATCHES %@" , emailRegex)
             
-            let  isValid = emailTest.evaluateWithObject(text)
+            let  isValid = emailTest.evaluate(with: text)
             if !isValid {
                 message = "Invalid Email Address"
             }
             return isValid;
         })
-        self.numberValidationBlock = ({(text:String,inout message: String) -> Bool in
+        self.numberValidationBlock = ({(text:String,message: inout String) -> Bool in
             let numRegex = "[0-9.+-]+";
             let numTest = NSPredicate(format:"SELF MATCHES %@" , numRegex)
             
-            let isValid =  numTest.evaluateWithObject(text)
+            let isValid =  numTest.evaluate(with: text)
             if !isValid {
                 message = "Invalid Number"
             }
@@ -88,38 +88,45 @@ public class EGFloatingTextField: UITextField {
         self.hasError = false
        
         self.labelTextColor = kDefaultLabelTextColor
-        self.label = UILabel(frame: CGRectZero)
-        self.label.font = self.labelFont
-        self.label.textColor = self.labelTextColor
-        self.label.textAlignment = NSTextAlignment.Left
-        self.label.numberOfLines = 1
-        self.label.layer.masksToBounds = false
-        self.addSubview(self.label)
         
+        self.label = UILabel(frame: CGRect.zero)
+        if let label = self.label {
+            label.font = self.labelFont
+            label.textColor = self.labelTextColor
+            label.textAlignment = NSTextAlignment.left
+            label.numberOfLines = 1
+            label.layer.masksToBounds = false
+            self.addSubview(label)
+        }
         
-        self.activeBorder = UIView(frame: CGRectZero)
-        self.activeBorder.backgroundColor = kDefaultActiveColor
-        self.activeBorder.layer.opacity = 0
-        self.addSubview(self.activeBorder)
+        self.activeBorder = UIView(frame: CGRect.zero)
+        if let activeBorder = self.activeBorder {
+            activeBorder.backgroundColor = kDefaultActiveColor
+            activeBorder.layer.opacity = 0
+            self.addSubview(activeBorder)
+        }
         
-        self.label.autoAlignAxis(ALAxis.Horizontal, toSameAxisOfView: self)
-        self.label.autoPinEdge(ALEdge.Left, toEdge: ALEdge.Left, ofView: self)
-        self.label.autoMatchDimension(ALDimension.Width, toDimension: ALDimension.Width, ofView: self)
-        self.label.autoMatchDimension(ALDimension.Height, toDimension: ALDimension.Height, ofView: self)
+        if let label = self.label {
+            label.autoAlignAxis(ALAxis.horizontal, toSameAxisOf: self)
+            label.autoPinEdge(ALEdge.left, to: ALEdge.left, of: self)
+            label.autoMatch(ALDimension.width, to: ALDimension.width, of: self)
+            label.autoMatch(ALDimension.height, to: ALDimension.height, of: self)
+        }
         
-        self.activeBorder.autoPinEdge(ALEdge.Bottom, toEdge: ALEdge.Bottom, ofView: self)
-        self.activeBorder.autoPinEdge(ALEdge.Left, toEdge: ALEdge.Left, ofView: self)
-        self.activeBorder.autoPinEdge(ALEdge.Right, toEdge: ALEdge.Right, ofView: self)
-        self.activeBorder.autoSetDimension(ALDimension.Height, toSize: 2)
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("textDidChange:"), name: "UITextFieldTextDidChangeNotification", object: self)
+        if let activeBorder = self.activeBorder {
+            activeBorder.autoPinEdge(ALEdge.bottom, to: ALEdge.bottom, of: self)
+            activeBorder.autoPinEdge(ALEdge.left, to: ALEdge.left, of: self)
+            activeBorder.autoPinEdge(ALEdge.right, to: ALEdge.right, of: self)
+            activeBorder.autoSetDimension(ALDimension.height, toSize: 2)
+        }
+        NotificationCenter.default.addObserver(self, selector: #selector(UITextInputDelegate.textDidChange(_:)), name: NSNotification.Name(rawValue: "UITextFieldTextDidChangeNotification"), object: self)
     }
     
-    public func setPlaceHolder(placeholder:String) {
-        self.label.text = placeholder
+    open func setPlaceHolder(_ placeholder:String) {
+        self.label?.text = placeholder
     }
     
-    override public func becomeFirstResponder() -> Bool {
+    override open func becomeFirstResponder() -> Bool {
         
         let flag:Bool = super.becomeFirstResponder()
         
@@ -127,13 +134,13 @@ public class EGFloatingTextField: UITextField {
             
             if (self.floatingLabel != nil) {
                 
-                if !self.floating! || self.text!.isEmpty {
+                if !self.floating! || (self.text?.isEmpty)! {
                     self.floatLabelToTop()
                     self.floating = true
                 }
             } else {
-                self.label.textColor = kDefaultActiveColor
-                self.label.layer.opacity = 0
+                self.label?.textColor = kDefaultActiveColor
+                self.label?.layer.opacity = 0
             }
             self.showActiveBorder()
         }
@@ -142,7 +149,7 @@ public class EGFloatingTextField: UITextField {
         return flag
     }
     
-    override public func resignFirstResponder() -> Bool {
+    override open func resignFirstResponder() -> Bool {
         
         let flag:Bool = super.resignFirstResponder()
         
@@ -150,16 +157,16 @@ public class EGFloatingTextField: UITextField {
             
             if (self.floatingLabel != nil) {
                 
-                if self.floating! && self.text!.isEmpty {
+                if self.floating! && (self.text?.isEmpty)! {
                     self.animateLabelBack()
                     self.floating = false
                 }
             } else {
-                if self.text!.isEmpty {
-                    self.label.layer.opacity = 1
+                if (self.text?.isEmpty)! {
+                    self.label?.layer.opacity = 1
                 }
             }
-            self.label.textColor = kDefaultInactiveColor
+            self.label?.textColor = kDefaultInactiveColor
             self.showInactiveBorder()
             self.validate()
         }
@@ -169,137 +176,143 @@ public class EGFloatingTextField: UITextField {
         
     }
     
-    override public func drawRect(rect: CGRect) {
-        super.drawRect(rect)
+    override open func draw(_ rect: CGRect) {
+        super.draw(rect)
         
-        let borderColor = self.hasError! ? kDefaultErrorColor : kDefaultInactiveColor
+        let borderColor = (self.hasError)! ? kDefaultErrorColor : kDefaultInactiveColor
         
-        let textRect = self.textRectForBounds(rect)
-        let context = UIGraphicsGetCurrentContext()
-        let borderlines : [CGPoint] = [CGPointMake(0, CGRectGetHeight(textRect) - 1),
-            CGPointMake(CGRectGetWidth(textRect), CGRectGetHeight(textRect) - 1)]
-        
-        if  self.enabled  {
+        let textRect = self.textRect(forBounds: rect)
+        if let context = UIGraphicsGetCurrentContext() {
+            let borderlines : [CGPoint] = [CGPoint(x: 0, y: textRect.height - 1),
+                CGPoint(x: textRect.width, y: textRect.height - 1)]
             
-            CGContextBeginPath(context);
-            CGContextAddLines(context, borderlines, 2);
-            CGContextSetLineWidth(context, 1.0);
-            CGContextSetStrokeColorWithColor(context, borderColor.CGColor);
-            CGContextStrokePath(context);
-            
-        } else {
-            
-            CGContextBeginPath(context);
-            CGContextAddLines(context, borderlines, 2);
-            CGContextSetLineWidth(context, 1.0);
-            let  dashPattern : [CGFloat]  = [2, 4]
-            CGContextSetLineDash(context, 0, dashPattern, 2);
-            CGContextSetStrokeColorWithColor(context, borderColor.CGColor);
-            CGContextStrokePath(context);
-            
+            if  self.isEnabled  {
+                
+                context.beginPath();
+                context.addLines(between:borderlines);
+                context.setLineWidth(1.0);
+                context.setStrokeColor(borderColor.cgColor);
+                context.strokePath();
+                
+            } else {
+                
+                context.beginPath();
+                context.addLines(between:borderlines);
+                context.setLineWidth(1.0);
+                let  dashPattern : [CGFloat]  = [2, 4]
+                context.setLineDash(phase:0, lengths:dashPattern);
+                context.setStrokeColor(borderColor.cgColor);
+                context.strokePath();
+                
+            }
         }
     }
     
-    func textDidChange(notif: NSNotification) {
+    func textDidChange(_ notif: Notification) {
         self.validate()
     }
     
     func floatLabelToTop() {
-        
-        CATransaction.begin()
-        CATransaction.setCompletionBlock { () -> Void in
-            self.label.textColor = self.kDefaultActiveColor
+        if let label = self.label {
+            CATransaction.begin()
+            CATransaction.setCompletionBlock { () -> Void in
+                label.textColor = self.kDefaultActiveColor
+            }
+            
+            let anim2 = CABasicAnimation(keyPath: "transform")
+            let fromTransform = CATransform3DMakeScale(CGFloat(1.0), CGFloat(1.0), CGFloat(1))
+            var toTransform = CATransform3DMakeScale(CGFloat(0.5), CGFloat(0.5), CGFloat(1))
+            toTransform = CATransform3DTranslate(toTransform, -label.frame.width/2, -label.frame.height, 0)
+            anim2.fromValue = NSValue(caTransform3D: fromTransform)
+            anim2.toValue = NSValue(caTransform3D: toTransform)
+            anim2.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+            let animGroup = CAAnimationGroup()
+            animGroup.animations = [anim2]
+            animGroup.duration = 0.3
+            animGroup.fillMode = kCAFillModeForwards;
+            animGroup.isRemovedOnCompletion = false;
+            label.layer.add(animGroup, forKey: "_floatingLabel")
+            self.clipsToBounds = false
+            CATransaction.commit()
         }
-        
-        let anim2 = CABasicAnimation(keyPath: "transform")
-        let fromTransform = CATransform3DMakeScale(CGFloat(1.0), CGFloat(1.0), CGFloat(1))
-        var toTransform = CATransform3DMakeScale(CGFloat(0.5), CGFloat(0.5), CGFloat(1))
-        toTransform = CATransform3DTranslate(toTransform, -CGRectGetWidth(self.label.frame)/2, -CGRectGetHeight(self.label.frame), 0)
-        anim2.fromValue = NSValue(CATransform3D: fromTransform)
-        anim2.toValue = NSValue(CATransform3D: toTransform)
-        anim2.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
-        let animGroup = CAAnimationGroup()
-        animGroup.animations = [anim2]
-        animGroup.duration = 0.3
-        animGroup.fillMode = kCAFillModeForwards;
-        animGroup.removedOnCompletion = false;
-        self.label.layer.addAnimation(animGroup, forKey: "_floatingLabel")
-        self.clipsToBounds = false
-        CATransaction.commit()
     }
     
     func showActiveBorder() {
-        
-        self.activeBorder.layer.transform = CATransform3DMakeScale(CGFloat(0.01), CGFloat(1.0), 1)
-        self.activeBorder.layer.opacity = 1
-        CATransaction.begin()
-        self.activeBorder.layer.transform = CATransform3DMakeScale(CGFloat(0.01), CGFloat(1.0), 1)
-        let anim2 = CABasicAnimation(keyPath: "transform")
-        let fromTransform = CATransform3DMakeScale(CGFloat(0.01), CGFloat(1.0), 1)
-        let toTransform = CATransform3DMakeScale(CGFloat(1.0), CGFloat(1.0), 1)
-        anim2.fromValue = NSValue(CATransform3D: fromTransform)
-        anim2.toValue = NSValue(CATransform3D: toTransform)
-        anim2.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
-        anim2.fillMode = kCAFillModeForwards
-        anim2.removedOnCompletion = false
-        self.activeBorder.layer.addAnimation(anim2, forKey: "_activeBorder")
-        CATransaction.commit()
+        if let activeBorder = self.activeBorder {
+            activeBorder.layer.transform = CATransform3DMakeScale(CGFloat(0.01), CGFloat(1.0), 1)
+            activeBorder.layer.opacity = 1
+            CATransaction.begin()
+            activeBorder.layer.transform = CATransform3DMakeScale(CGFloat(0.01), CGFloat(1.0), 1)
+            let anim2 = CABasicAnimation(keyPath: "transform")
+            let fromTransform = CATransform3DMakeScale(CGFloat(0.01), CGFloat(1.0), 1)
+            let toTransform = CATransform3DMakeScale(CGFloat(1.0), CGFloat(1.0), 1)
+            anim2.fromValue = NSValue(caTransform3D: fromTransform)
+            anim2.toValue = NSValue(caTransform3D: toTransform)
+            anim2.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+            anim2.fillMode = kCAFillModeForwards
+            anim2.isRemovedOnCompletion = false
+            activeBorder.layer.add(anim2, forKey: "_activeBorder")
+            CATransaction.commit()
+        }
     }
     
     func animateLabelBack() {
-        CATransaction.begin()
-        CATransaction.setCompletionBlock { () -> Void in
-            self.label.textColor = self.kDefaultInactiveColor
+        if let label = self.label {
+            CATransaction.begin()
+            CATransaction.setCompletionBlock { () -> Void in
+                label.textColor = self.kDefaultInactiveColor
+            }
+            
+            let anim2 = CABasicAnimation(keyPath: "transform")
+            var fromTransform = CATransform3DMakeScale(0.5, 0.5, 1)
+            fromTransform = CATransform3DTranslate(fromTransform, -label.frame.width/2, -label.frame.height, 0);
+            let toTransform = CATransform3DMakeScale(1.0, 1.0, 1)
+            anim2.fromValue = NSValue(caTransform3D: fromTransform)
+            anim2.toValue = NSValue(caTransform3D: toTransform)
+            anim2.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+            
+            let animGroup = CAAnimationGroup()
+            animGroup.animations = [anim2]
+            animGroup.duration = 0.3
+            animGroup.fillMode = kCAFillModeForwards;
+            animGroup.isRemovedOnCompletion = false;
+            
+            label.layer.add(animGroup, forKey: "_animateLabelBack")
+            CATransaction.commit()
         }
-        
-        let anim2 = CABasicAnimation(keyPath: "transform")
-        var fromTransform = CATransform3DMakeScale(0.5, 0.5, 1)
-        fromTransform = CATransform3DTranslate(fromTransform, -CGRectGetWidth(self.label.frame)/2, -CGRectGetHeight(self.label.frame), 0);
-        let toTransform = CATransform3DMakeScale(1.0, 1.0, 1)
-        anim2.fromValue = NSValue(CATransform3D: fromTransform)
-        anim2.toValue = NSValue(CATransform3D: toTransform)
-        anim2.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
-        
-        let animGroup = CAAnimationGroup()
-        animGroup.animations = [anim2]
-        animGroup.duration = 0.3
-        animGroup.fillMode = kCAFillModeForwards;
-        animGroup.removedOnCompletion = false;
-        
-        self.label.layer.addAnimation(animGroup, forKey: "_animateLabelBack")
-        CATransaction.commit()
     }
     
     func showInactiveBorder() {
-        
-        CATransaction.begin()
-        CATransaction.setCompletionBlock { () -> Void in
-            self.activeBorder.layer.opacity = 0
+        if let activeBorder = self.activeBorder {
+            CATransaction.begin()
+            CATransaction.setCompletionBlock { () -> Void in
+                activeBorder.layer.opacity = 0
+            }
+            let anim2 = CABasicAnimation(keyPath: "transform")
+            let fromTransform = CATransform3DMakeScale(1.0, 1.0, 1)
+            let toTransform = CATransform3DMakeScale(0.01, 1.0, 1)
+            anim2.fromValue = NSValue(caTransform3D: fromTransform)
+            anim2.toValue = NSValue(caTransform3D: toTransform)
+            anim2.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+            anim2.fillMode = kCAFillModeForwards
+            anim2.isRemovedOnCompletion = false
+            activeBorder.layer.add(anim2, forKey: "_activeBorder")
+            CATransaction.commit()
         }
-        let anim2 = CABasicAnimation(keyPath: "transform")
-        let fromTransform = CATransform3DMakeScale(1.0, 1.0, 1)
-        let toTransform = CATransform3DMakeScale(0.01, 1.0, 1)
-        anim2.fromValue = NSValue(CATransform3D: fromTransform)
-        anim2.toValue = NSValue(CATransform3D: toTransform)
-        anim2.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
-        anim2.fillMode = kCAFillModeForwards
-        anim2.removedOnCompletion = false
-        self.activeBorder.layer.addAnimation(anim2, forKey: "_activeBorder")
-        CATransaction.commit()
     }
     
-    func performValidation(isValid:Bool,message:String) {
+    func performValidation(_ isValid:Bool,message:String) {
         if !isValid {
             self.hasError = true
             self.errorMessage = message
             self.labelTextColor = kDefaultErrorColor
-            self.activeBorder.backgroundColor = kDefaultErrorColor
+            self.activeBorder?.backgroundColor = kDefaultErrorColor
             self.setNeedsDisplay()
         } else {
             self.hasError = false
             self.errorMessage = nil
             self.labelTextColor = kDefaultActiveColor
-            self.activeBorder.backgroundColor = kDefaultActiveColor
+            self.activeBorder?.backgroundColor = kDefaultActiveColor
             self.setNeedsDisplay()
         }
     }
@@ -309,27 +322,31 @@ public class EGFloatingTextField: UITextField {
         if self.validationType != nil {
             var message : String = ""
             
-            if self.validationType! == .Email {
+            if self.validationType == .email {
+                if let emailValidationBlock = self.emailValidationBlock,
+                let text = self.text {
+                    let isValid = emailValidationBlock(text, &message)
+                    performValidation(isValid,message: message)
+                }
                 
-                let isValid = self.emailValidationBlock(text: self.text!, message: &message)
-                performValidation(isValid,message: message)
-                
-            } else if self.validationType! == .Number {
-                
-                let isValid = self.numberValidationBlock(text: self.text!, message: &message)
-                performValidation(isValid,message: message)
+            } else if self.validationType == .number {
+                if let numberValidationBlock = self.numberValidationBlock,
+                let text = self.text {
+                    let isValid = numberValidationBlock(text, &message)
+                    performValidation(isValid,message: message)
+                }
             }
             else {
-                
-                let isValid = self.customValidationBlock(text: self.text!, message: &message)
-                performValidation(isValid,message: message)
+                if let customValidationBlock = self.customValidationBlock,
+                let text = self.text {
+                    let isValid = customValidationBlock(text, &message)
+                    performValidation(isValid,message: message)
+                }
             }
         }
     }
-    
-    
 }
 
 extension EGFloatingTextField {
-    
+        
 }
