@@ -336,12 +336,11 @@ open class EGFloatingTextField: UITextField {
                     performValidation(isValid,message: message)
                 }
             }
-            else {
-                if let customValidationBlock = self.customValidationBlock,
+            
+            if let customValidationBlock = self.customValidationBlock,
                 let text = self.text {
-                    let isValid = customValidationBlock(text, &message)
-                    performValidation(isValid,message: message)
-                }
+                let isValid = customValidationBlock(text, &message)
+                performValidation(isValid,message: message)
             }
         }
     }
