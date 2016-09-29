@@ -21,6 +21,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9C21F2821D9D38DA00ED58CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7CBFB1F1B769D1700CDE475 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B77E397B1B778E880078ABA3;
+			remoteInfo = Example;
+		};
 		B77E39911B778E880078ABA3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B7CBFB1F1B769D1700CDE475 /* Project object */;
@@ -297,6 +304,7 @@
 			);
 			dependencies = (
 				B7CBFB361B769D1800CDE475 /* PBXTargetDependency */,
+				9C21F2831D9D38DA00ED58CC /* PBXTargetDependency */,
 			);
 			name = EGFloatingTextFieldTests;
 			productName = EGFloatingTextFieldTests;
@@ -315,17 +323,23 @@
 				TargetAttributes = {
 					B77E397B1B778E880078ABA3 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 9P74SUU7L6;
+						LastSwiftMigration = 0800;
 					};
 					B77E398F1B778E880078ABA3 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 9P74SUU7L6;
 						TestTargetID = B77E397B1B778E880078ABA3;
 					};
 					B7CBFB271B769D1700CDE475 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 9P74SUU7L6;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 					};
 					B7CBFB321B769D1800CDE475 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 9P74SUU7L6;
 						LastSwiftMigration = 0800;
 					};
 				};
@@ -455,6 +469,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		9C21F2831D9D38DA00ED58CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B77E397B1B778E880078ABA3 /* Example */;
+			targetProxy = 9C21F2821D9D38DA00ED58CC /* PBXContainerItemProxy */;
+		};
 		B77E39921B778E880078ABA3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B77E397B1B778E880078ABA3 /* Example */;
@@ -496,6 +515,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9P74SUU7L6;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -504,6 +524,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -511,10 +532,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9P74SUU7L6;
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -522,6 +545,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 9P74SUU7L6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -535,6 +559,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Example.app/Example";
 			};
 			name = Debug;
@@ -543,6 +568,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 9P74SUU7L6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -552,6 +578,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Example.app/Example";
 			};
 			name = Release;
@@ -656,8 +683,9 @@
 			baseConfigurationReference = 36B5992605E1EC32FF7D24F9 /* Pods-EGFloatingTextField.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9P74SUU7L6;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -678,8 +706,9 @@
 			baseConfigurationReference = 54182CEE59BCC3469EBBBFA4 /* Pods-EGFloatingTextField.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9P74SUU7L6;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -697,6 +726,7 @@
 		B7CBFB421B769D1800CDE475 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 9P74SUU7L6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -709,6 +739,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REEXPORTED_FRAMEWORK_NAMES = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -716,6 +747,7 @@
 		B7CBFB431B769D1800CDE475 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 9P74SUU7L6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -724,6 +756,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REEXPORTED_FRAMEWORK_NAMES = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
