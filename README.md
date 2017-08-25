@@ -60,6 +60,7 @@ enum EGFloatingTextFieldValidationType {
     case Custom
     case ..
 }
+```
 
 Implement the validation block
 ```
