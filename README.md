@@ -63,6 +63,7 @@ enum EGFloatingTextFieldValidationType {
 
 Implement the validation block
 ```
+```
 self.customValidationBlock = ({(text:String, inout message: String) -> Bool in
     ....
 })
