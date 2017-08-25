@@ -442,7 +442,7 @@ open class EGFloatingTextField: UITextField {
         }
     }
 
-    func validate() {
+    public func validate() {
         if !canBeEmpty, text?.isEmpty ?? true {
             hasError(true, withMessage: EGFloatingTextField.localizedString(string: "Required"))
             performValidation()
@@ -453,7 +453,7 @@ open class EGFloatingTextField: UITextField {
         }
     }
 
-    func hasError(_ hasError: Bool = false, withMessage message: String? = nil) {
+    public func hasError(_ hasError: Bool = false, withMessage message: String? = nil) {
         self.hasError = hasError
         errorMessage = message
     }
