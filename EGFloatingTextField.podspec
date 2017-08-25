@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "EGFloatingTextField"
-  s.version          = "1.0.8"
+  s.version          = "1.0.9"
   s.summary          = "Implementation of Google's 'Floating labels' of Material design."
   s.homepage         = "https://github.com/rimonhanna/EGFloatingTextField"
   s.license          = 'MIT'

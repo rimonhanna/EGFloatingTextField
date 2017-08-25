@@ -424,7 +424,7 @@ open class EGFloatingTextField: UITextField {
         CATransaction.commit()
     }
 
-    func performValidation() {
+    public func performValidation() {
         if hasError {
             floatErrorLabelToTop()
             self.labelTextColor = kDefaultErrorColor
