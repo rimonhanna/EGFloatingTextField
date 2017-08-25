@@ -57,27 +57,21 @@ enum EGFloatingTextFieldValidationType {
 
     case Email
     case Number
-    case X
+    case Custom
+    case ..
 }
-```
-Create validation block for validationtype
-```
-private var xValidationBlock : EGFloatingTextFieldValidationBlock
-```
 
-Implement the validation block in commitInit Method
+Implement the validation block
 ```
-func commonInit(){
-
-        self.xValidationBlock = ({(text:String, inout message: String) -> Bool in
-            ....
-        })
-        .....
-}
+self.customValidationBlock = ({(text:String, inout message: String) -> Bool in
+    ....
+})
+.....
 ```
 
 ## Author
 
+Rimon Hanna, https://twitter.com/rimon_hanna
 Enis Gayretli, enisgayretli@gmail.com
 
 ## License
