@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		69C92FA6B910345AF1C0E2B5 /* Pods_EGFloatingTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD19DB55B4D44EF6A9BB8740 /* Pods_EGFloatingTextField.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		22F53C0191648AC800BA57CC /* Pods_EGFloatingTextFieldTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9F858C542A41E3978498E4 /* Pods_EGFloatingTextFieldTests.framework */; };
 		9C8FC3371F504A8800C5B80C /* EGLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C8FC3351F504A8700C5B80C /* EGLocalizable.strings */; };
 		B77E39811B778E880078ABA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77E39801B778E880078ABA3 /* AppDelegate.swift */; };
 		B77E39831B778E880078ABA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77E39821B778E880078ABA3 /* ViewController.swift */; };
@@ -19,6 +19,7 @@
 		B7CBFB341B769D1800CDE475 /* EGFloatingTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7CBFB281B769D1700CDE475 /* EGFloatingTextField.framework */; };
 		B7CBFB3B1B769D1800CDE475 /* EGFloatingTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CBFB3A1B769D1800CDE475 /* EGFloatingTextFieldTests.swift */; };
 		B7CBFB451B769D8700CDE475 /* EGFloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CBFB441B769D8700CDE475 /* EGFloatingTextField.swift */; };
+		FE3C2F8B73A0FF197428B285 /* Pods_EGFloatingTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096402613A183F28F85B3A37 /* Pods_EGFloatingTextField.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,11 +54,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		36B5992605E1EC32FF7D24F9 /* Pods-EGFloatingTextField.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EGFloatingTextField.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EGFloatingTextField/Pods-EGFloatingTextField.debug.xcconfig"; sourceTree = "<group>"; };
-		54182CEE59BCC3469EBBBFA4 /* Pods-EGFloatingTextField.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EGFloatingTextField.release.xcconfig"; path = "Pods/Target Support Files/Pods-EGFloatingTextField/Pods-EGFloatingTextField.release.xcconfig"; sourceTree = "<group>"; };
+		096402613A183F28F85B3A37 /* Pods_EGFloatingTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EGFloatingTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2549C615C53E73357831297E /* Pods-EGFloatingTextField.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EGFloatingTextField.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EGFloatingTextField/Pods-EGFloatingTextField.debug.xcconfig"; sourceTree = "<group>"; };
+		2A9F858C542A41E3978498E4 /* Pods_EGFloatingTextFieldTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EGFloatingTextFieldTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		470328949347ACC3400DDC67 /* Pods-EGFloatingTextField.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EGFloatingTextField.release.xcconfig"; path = "Pods/Target Support Files/Pods-EGFloatingTextField/Pods-EGFloatingTextField.release.xcconfig"; sourceTree = "<group>"; };
+		8A125C864C901795E8287234 /* Pods-EGFloatingTextFieldTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EGFloatingTextFieldTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EGFloatingTextFieldTests/Pods-EGFloatingTextFieldTests.release.xcconfig"; sourceTree = "<group>"; };
 		9C8FC3361F504A8800C5B80C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/EGLocalizable.strings; sourceTree = "<group>"; };
 		9C8FC3381F504A8D00C5B80C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/EGLocalizable.strings; sourceTree = "<group>"; };
 		9C8FC3391F504A9500C5B80C /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/EGLocalizable.strings; sourceTree = "<group>"; };
+		A2EEF67C3886C5AB4CAC0AA3 /* Pods-EGFloatingTextFieldTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EGFloatingTextFieldTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EGFloatingTextFieldTests/Pods-EGFloatingTextFieldTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B77E397C1B778E880078ABA3 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B77E397F1B778E880078ABA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B77E39801B778E880078ABA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,7 +80,6 @@
 		B7CBFB391B769D1800CDE475 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7CBFB3A1B769D1800CDE475 /* EGFloatingTextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGFloatingTextFieldTests.swift; sourceTree = "<group>"; };
 		B7CBFB441B769D8700CDE475 /* EGFloatingTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EGFloatingTextField.swift; sourceTree = "<group>"; };
-		DD19DB55B4D44EF6A9BB8740 /* Pods_EGFloatingTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EGFloatingTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69C92FA6B910345AF1C0E2B5 /* Pods_EGFloatingTextField.framework in Frameworks */,
+				FE3C2F8B73A0FF197428B285 /* Pods_EGFloatingTextField.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,25 +110,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7CBFB341B769D1800CDE475 /* EGFloatingTextField.framework in Frameworks */,
+				22F53C0191648AC800BA57CC /* Pods_EGFloatingTextFieldTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9452A29E96832CA8A843AFC2 /* Frameworks */ = {
+		3C69B06194535337E97B6F46 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DD19DB55B4D44EF6A9BB8740 /* Pods_EGFloatingTextField.framework */,
+				096402613A183F28F85B3A37 /* Pods_EGFloatingTextField.framework */,
+				2A9F858C542A41E3978498E4 /* Pods_EGFloatingTextFieldTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A57F9D76134984C01F71698E /* Pods */ = {
+		96A43ED4B6BA5640AF0EC686 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				36B5992605E1EC32FF7D24F9 /* Pods-EGFloatingTextField.debug.xcconfig */,
-				54182CEE59BCC3469EBBBFA4 /* Pods-EGFloatingTextField.release.xcconfig */,
+				2549C615C53E73357831297E /* Pods-EGFloatingTextField.debug.xcconfig */,
+				470328949347ACC3400DDC67 /* Pods-EGFloatingTextField.release.xcconfig */,
+				A2EEF67C3886C5AB4CAC0AA3 /* Pods-EGFloatingTextFieldTests.debug.xcconfig */,
+				8A125C864C901795E8287234 /* Pods-EGFloatingTextFieldTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -175,8 +183,8 @@
 				B77E397D1B778E880078ABA3 /* Example */,
 				B77E39931B778E880078ABA3 /* ExampleTests */,
 				B7CBFB291B769D1700CDE475 /* Products */,
-				A57F9D76134984C01F71698E /* Pods */,
-				9452A29E96832CA8A843AFC2 /* Frameworks */,
+				96A43ED4B6BA5640AF0EC686 /* Pods */,
+				3C69B06194535337E97B6F46 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -281,12 +289,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B7CBFB3E1B769D1800CDE475 /* Build configuration list for PBXNativeTarget "EGFloatingTextField" */;
 			buildPhases = (
-				AC2EF429C790FE08ED893E56 /* Check Pods Manifest.lock */,
+				359DF62288EF1B7DF0AB1AC0 /* [CP] Check Pods Manifest.lock */,
 				B7CBFB231B769D1700CDE475 /* Sources */,
 				B7CBFB241B769D1700CDE475 /* Frameworks */,
 				B7CBFB251B769D1700CDE475 /* Headers */,
 				B7CBFB261B769D1700CDE475 /* Resources */,
-				91734EE7DF0AA3C3C458985E /* Copy Pods Resources */,
+				BAEE52CF3F2FAF319479A8AB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -301,9 +309,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B7CBFB411B769D1800CDE475 /* Build configuration list for PBXNativeTarget "EGFloatingTextFieldTests" */;
 			buildPhases = (
+				83A477E869E149FEAFB8C7C2 /* [CP] Check Pods Manifest.lock */,
 				B7CBFB2F1B769D1800CDE475 /* Sources */,
 				B7CBFB301B769D1800CDE475 /* Frameworks */,
 				B7CBFB311B769D1800CDE475 /* Resources */,
+				B1FBE63B26F4DAECC7309889 /* [CP] Embed Pods Frameworks */,
+				4B112E9729D1B5D29B5A6130 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -408,34 +419,88 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		91734EE7DF0AA3C3C458985E /* Copy Pods Resources */ = {
+		359DF62288EF1B7DF0AB1AC0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EGFloatingTextField-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B112E9729D1B5D29B5A6130 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EGFloatingTextFieldTests/Pods-EGFloatingTextFieldTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		83A477E869E149FEAFB8C7C2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EGFloatingTextFieldTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1FBE63B26F4DAECC7309889 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-EGFloatingTextFieldTests/Pods-EGFloatingTextFieldTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EGFloatingTextFieldTests/Pods-EGFloatingTextFieldTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BAEE52CF3F2FAF319479A8AB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EGFloatingTextField/Pods-EGFloatingTextField-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AC2EF429C790FE08ED893E56 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -702,7 +767,7 @@
 		};
 		B7CBFB3F1B769D1800CDE475 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 36B5992605E1EC32FF7D24F9 /* Pods-EGFloatingTextField.debug.xcconfig */;
+			baseConfigurationReference = 2549C615C53E73357831297E /* Pods-EGFloatingTextField.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -725,7 +790,7 @@
 		};
 		B7CBFB401B769D1800CDE475 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 54182CEE59BCC3469EBBBFA4 /* Pods-EGFloatingTextField.release.xcconfig */;
+			baseConfigurationReference = 470328949347ACC3400DDC67 /* Pods-EGFloatingTextField.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -747,6 +812,7 @@
 		};
 		B7CBFB421B769D1800CDE475 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2EEF67C3886C5AB4CAC0AA3 /* Pods-EGFloatingTextFieldTests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 9P74SUU7L6;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -768,6 +834,7 @@
 		};
 		B7CBFB431B769D1800CDE475 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A125C864C901795E8287234 /* Pods-EGFloatingTextFieldTests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 9P74SUU7L6;
 				FRAMEWORK_SEARCH_PATHS = (

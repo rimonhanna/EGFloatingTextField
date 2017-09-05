@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_EGFloatingTextFieldVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_EGFloatingTextFieldVersionString[];
+FOUNDATION_EXPORT double Pods_EGFloatingTextFieldTestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_EGFloatingTextFieldTestsVersionString[];
 
