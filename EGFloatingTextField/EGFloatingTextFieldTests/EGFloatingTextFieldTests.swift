@@ -2,11 +2,9 @@
 //  EGFloatingTextFieldTests.swift
 //  EGFloatingTextFieldTests
 //
-//  Created by Mac HD on 8.08.2015.
-//
+//  Created by Rimon Hanna on 06/09/2017.
 //
 
-import UIKit
 import XCTest
 
 class EGFloatingTextFieldTests: XCTestCase {
@@ -23,12 +21,12 @@ class EGFloatingTextFieldTests: XCTestCase {
     
     func testExample() {
         // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measure() {
+        self.measure {
             // Put the code you want to measure the time of here.
         }
     }

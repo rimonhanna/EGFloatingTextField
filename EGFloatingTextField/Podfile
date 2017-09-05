@@ -12,6 +12,8 @@ target 'EGFloatingTextField' do
     pod 'PureLayout'
     target 'Example' do
     end
+    target 'EGFloatingTextFieldTests' do
+    end
 end
 
 

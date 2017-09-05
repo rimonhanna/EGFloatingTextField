@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D641E9A533FAFB4BE90BCCC /* Pods_EGFloatingTextField_EGFloatingTextFieldTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A676F3B99DE919EDA3A54098 /* Pods_EGFloatingTextField_EGFloatingTextFieldTests.framework */; };
 		6FE6A1557155E8E52ED3F6C5 /* Pods_EGFloatingTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88FF2CA8A7F8471DC0D657F1 /* Pods_EGFloatingTextField.framework */; };
 		9C8FC3371F504A8800C5B80C /* EGLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C8FC3351F504A8700C5B80C /* EGLocalizable.strings */; };
+		9CFF1B341F5F5C4B006FA5E7 /* EGFloatingTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFF1B331F5F5C4B006FA5E7 /* EGFloatingTextFieldTests.swift */; };
+		9CFF1B361F5F5C4B006FA5E7 /* EGFloatingTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7CBFB281B769D1700CDE475 /* EGFloatingTextField.framework */; };
+		9CFF1B3C1F5F5CC1006FA5E7 /* EGFloatingTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7CBFB281B769D1700CDE475 /* EGFloatingTextField.framework */; };
+		9CFF1B3D1F5F5CC1006FA5E7 /* EGFloatingTextField.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7CBFB281B769D1700CDE475 /* EGFloatingTextField.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B0AAEED6FB392928E3F01F69 /* Pods_EGFloatingTextField_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54FB0735A8B40F597811F63A /* Pods_EGFloatingTextField_Example.framework */; };
 		B77E39811B778E880078ABA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77E39801B778E880078ABA3 /* AppDelegate.swift */; };
 		B77E39831B778E880078ABA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77E39821B778E880078ABA3 /* ViewController.swift */; };
@@ -17,18 +22,16 @@
 		B77E398B1B778E880078ABA3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B77E39891B778E880078ABA3 /* LaunchScreen.xib */; };
 		B77E39971B778E880078ABA3 /* ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77E39961B778E880078ABA3 /* ExampleTests.swift */; };
 		B7CBFB2E1B769D1700CDE475 /* EGFloatingTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = B7CBFB2D1B769D1700CDE475 /* EGFloatingTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B7CBFB341B769D1800CDE475 /* EGFloatingTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7CBFB281B769D1700CDE475 /* EGFloatingTextField.framework */; };
-		B7CBFB3B1B769D1800CDE475 /* EGFloatingTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CBFB3A1B769D1800CDE475 /* EGFloatingTextFieldTests.swift */; };
 		B7CBFB451B769D8700CDE475 /* EGFloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CBFB441B769D8700CDE475 /* EGFloatingTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9C21F2821D9D38DA00ED58CC /* PBXContainerItemProxy */ = {
+		9CFF1B371F5F5C4B006FA5E7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B7CBFB1F1B769D1700CDE475 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B77E397B1B778E880078ABA3;
-			remoteInfo = Example;
+			remoteGlobalIDString = B7CBFB271B769D1700CDE475;
+			remoteInfo = EGFloatingTextField;
 		};
 		B77E39911B778E880078ABA3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -44,14 +47,21 @@
 			remoteGlobalIDString = B7CBFB271B769D1700CDE475;
 			remoteInfo = EGFloatingTextField;
 		};
-		B7CBFB351B769D1800CDE475 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B7CBFB1F1B769D1700CDE475 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B7CBFB271B769D1700CDE475;
-			remoteInfo = EGFloatingTextField;
-		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9CFF1B3E1F5F5CC1006FA5E7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9CFF1B3D1F5F5CC1006FA5E7 /* EGFloatingTextField.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		54FB0735A8B40F597811F63A /* Pods_EGFloatingTextField_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EGFloatingTextField_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +71,10 @@
 		9C8FC3361F504A8800C5B80C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/EGLocalizable.strings; sourceTree = "<group>"; };
 		9C8FC3381F504A8D00C5B80C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/EGLocalizable.strings; sourceTree = "<group>"; };
 		9C8FC3391F504A9500C5B80C /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/EGLocalizable.strings; sourceTree = "<group>"; };
+		9CFF1B311F5F5C4B006FA5E7 /* EGFloatingTextFieldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EGFloatingTextFieldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CFF1B331F5F5C4B006FA5E7 /* EGFloatingTextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGFloatingTextFieldTests.swift; sourceTree = "<group>"; };
+		9CFF1B351F5F5C4B006FA5E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A676F3B99DE919EDA3A54098 /* Pods_EGFloatingTextField_EGFloatingTextFieldTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EGFloatingTextField_EGFloatingTextFieldTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABDA111BF2B3044D15EEBD50 /* Pods-EGFloatingTextField.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EGFloatingTextField.release.xcconfig"; path = "Pods/Target Support Files/Pods-EGFloatingTextField/Pods-EGFloatingTextField.release.xcconfig"; sourceTree = "<group>"; };
 		B77E397C1B778E880078ABA3 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B77E397F1B778E880078ABA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,18 +89,29 @@
 		B7CBFB281B769D1700CDE475 /* EGFloatingTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EGFloatingTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7CBFB2C1B769D1700CDE475 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7CBFB2D1B769D1700CDE475 /* EGFloatingTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EGFloatingTextField.h; sourceTree = "<group>"; };
-		B7CBFB331B769D1800CDE475 /* EGFloatingTextFieldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EGFloatingTextFieldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7CBFB391B769D1800CDE475 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7CBFB3A1B769D1800CDE475 /* EGFloatingTextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGFloatingTextFieldTests.swift; sourceTree = "<group>"; };
 		B7CBFB441B769D8700CDE475 /* EGFloatingTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EGFloatingTextField.swift; sourceTree = "<group>"; };
+		D2908B74734220596E6BD362 /* Pods-EGFloatingTextField-EGFloatingTextFieldTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EGFloatingTextField-EGFloatingTextFieldTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EGFloatingTextField-EGFloatingTextFieldTests/Pods-EGFloatingTextField-EGFloatingTextFieldTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E40E227F9EF185953D18EBF7 /* Pods-EGFloatingTextField-EGFloatingTextFieldTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EGFloatingTextField-EGFloatingTextFieldTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EGFloatingTextField-EGFloatingTextFieldTests/Pods-EGFloatingTextField-EGFloatingTextFieldTests.release.xcconfig"; sourceTree = "<group>"; };
 		E89EFC7B0AFB10C2B1DB199A /* Pods-EGFloatingTextField.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EGFloatingTextField.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EGFloatingTextField/Pods-EGFloatingTextField.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9CFF1B2E1F5F5C4B006FA5E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CFF1B361F5F5C4B006FA5E7 /* EGFloatingTextField.framework in Frameworks */,
+				2D641E9A533FAFB4BE90BCCC /* Pods_EGFloatingTextField_EGFloatingTextFieldTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B77E39791B778E880078ABA3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CFF1B3C1F5F5CC1006FA5E7 /* EGFloatingTextField.framework in Frameworks */,
 				B0AAEED6FB392928E3F01F69 /* Pods_EGFloatingTextField_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,14 +131,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B7CBFB301B769D1800CDE475 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B7CBFB341B769D1800CDE475 /* EGFloatingTextField.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -122,6 +139,7 @@
 			children = (
 				88FF2CA8A7F8471DC0D657F1 /* Pods_EGFloatingTextField.framework */,
 				54FB0735A8B40F597811F63A /* Pods_EGFloatingTextField_Example.framework */,
+				A676F3B99DE919EDA3A54098 /* Pods_EGFloatingTextField_EGFloatingTextFieldTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -133,8 +151,19 @@
 				ABDA111BF2B3044D15EEBD50 /* Pods-EGFloatingTextField.release.xcconfig */,
 				626201C15C600769384054B8 /* Pods-EGFloatingTextField-Example.debug.xcconfig */,
 				939DABB4A44F2DF15D376C71 /* Pods-EGFloatingTextField-Example.release.xcconfig */,
+				D2908B74734220596E6BD362 /* Pods-EGFloatingTextField-EGFloatingTextFieldTests.debug.xcconfig */,
+				E40E227F9EF185953D18EBF7 /* Pods-EGFloatingTextField-EGFloatingTextFieldTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		9CFF1B321F5F5C4B006FA5E7 /* EGFloatingTextFieldTests */ = {
+			isa = PBXGroup;
+			children = (
+				9CFF1B331F5F5C4B006FA5E7 /* EGFloatingTextFieldTests.swift */,
+				9CFF1B351F5F5C4B006FA5E7 /* Info.plist */,
+			);
+			path = EGFloatingTextFieldTests;
 			sourceTree = "<group>";
 		};
 		B77E397D1B778E880078ABA3 /* Example */ = {
@@ -182,6 +211,7 @@
 				B7CBFB371B769D1800CDE475 /* EGFloatingTextFieldTests */,
 				B77E397D1B778E880078ABA3 /* Example */,
 				B77E39931B778E880078ABA3 /* ExampleTests */,
+				9CFF1B321F5F5C4B006FA5E7 /* EGFloatingTextFieldTests */,
 				B7CBFB291B769D1700CDE475 /* Products */,
 				96A43ED4B6BA5640AF0EC686 /* Pods */,
 				3C69B06194535337E97B6F46 /* Frameworks */,
@@ -192,9 +222,9 @@
 			isa = PBXGroup;
 			children = (
 				B7CBFB281B769D1700CDE475 /* EGFloatingTextField.framework */,
-				B7CBFB331B769D1800CDE475 /* EGFloatingTextFieldTests.xctest */,
 				B77E397C1B778E880078ABA3 /* Example.app */,
 				B77E39901B778E880078ABA3 /* ExampleTests.xctest */,
+				9CFF1B311F5F5C4B006FA5E7 /* EGFloatingTextFieldTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -249,6 +279,27 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		9CFF1B301F5F5C4B006FA5E7 /* EGFloatingTextFieldTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CFF1B391F5F5C4B006FA5E7 /* Build configuration list for PBXNativeTarget "EGFloatingTextFieldTests" */;
+			buildPhases = (
+				B623D292BC41742181CC369C /* [CP] Check Pods Manifest.lock */,
+				9CFF1B2D1F5F5C4B006FA5E7 /* Sources */,
+				9CFF1B2E1F5F5C4B006FA5E7 /* Frameworks */,
+				9CFF1B2F1F5F5C4B006FA5E7 /* Resources */,
+				5A32B14721586555DDC6A9B8 /* [CP] Embed Pods Frameworks */,
+				7038FF12B25CB0E388972A9A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9CFF1B381F5F5C4B006FA5E7 /* PBXTargetDependency */,
+			);
+			name = EGFloatingTextFieldTests;
+			productName = EGFloatingTextFieldTests;
+			productReference = 9CFF1B311F5F5C4B006FA5E7 /* EGFloatingTextFieldTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		B77E397B1B778E880078ABA3 /* Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B77E39981B778E880078ABA3 /* Build configuration list for PBXNativeTarget "Example" */;
@@ -259,6 +310,7 @@
 				B77E397A1B778E880078ABA3 /* Resources */,
 				010E3DF5D158375BE934F5DC /* [CP] Embed Pods Frameworks */,
 				65ACA598E94DAB0D5F443E35 /* [CP] Copy Pods Resources */,
+				9CFF1B3E1F5F5CC1006FA5E7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -308,25 +360,6 @@
 			productReference = B7CBFB281B769D1700CDE475 /* EGFloatingTextField.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		B7CBFB321B769D1800CDE475 /* EGFloatingTextFieldTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B7CBFB411B769D1800CDE475 /* Build configuration list for PBXNativeTarget "EGFloatingTextFieldTests" */;
-			buildPhases = (
-				B7CBFB2F1B769D1800CDE475 /* Sources */,
-				B7CBFB301B769D1800CDE475 /* Frameworks */,
-				B7CBFB311B769D1800CDE475 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B7CBFB361B769D1800CDE475 /* PBXTargetDependency */,
-				9C21F2831D9D38DA00ED58CC /* PBXTargetDependency */,
-			);
-			name = EGFloatingTextFieldTests;
-			productName = EGFloatingTextFieldTests;
-			productReference = B7CBFB331B769D1800CDE475 /* EGFloatingTextFieldTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -334,9 +367,14 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftMigration = 0700;
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0900;
 				LastUpgradeCheck = 0900;
 				TargetAttributes = {
+					9CFF1B301F5F5C4B006FA5E7 = {
+						CreatedOnToolsVersion = 9.0;
+						DevelopmentTeam = 9P74SUU7L6;
+						ProvisioningStyle = Automatic;
+					};
 					B77E397B1B778E880078ABA3 = {
 						CreatedOnToolsVersion = 6.4;
 						DevelopmentTeam = 9P74SUU7L6;
@@ -352,11 +390,6 @@
 						DevelopmentTeam = 9P74SUU7L6;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
-					};
-					B7CBFB321B769D1800CDE475 = {
-						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = 9P74SUU7L6;
-						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -376,7 +409,7 @@
 			projectRoot = "";
 			targets = (
 				B7CBFB271B769D1700CDE475 /* EGFloatingTextField */,
-				B7CBFB321B769D1800CDE475 /* EGFloatingTextFieldTests */,
+				9CFF1B301F5F5C4B006FA5E7 /* EGFloatingTextFieldTests */,
 				B77E397B1B778E880078ABA3 /* Example */,
 				B77E398F1B778E880078ABA3 /* ExampleTests */,
 			);
@@ -384,6 +417,13 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9CFF1B2F1F5F5C4B006FA5E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B77E397A1B778E880078ABA3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -406,13 +446,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C8FC3371F504A8800C5B80C /* EGLocalizable.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B7CBFB311B769D1800CDE475 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +488,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		5A32B14721586555DDC6A9B8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-EGFloatingTextField-EGFloatingTextFieldTests/Pods-EGFloatingTextField-EGFloatingTextFieldTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EGFloatingTextField-EGFloatingTextFieldTests/Pods-EGFloatingTextField-EGFloatingTextFieldTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		65ACA598E94DAB0D5F443E35 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -488,6 +539,39 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		7038FF12B25CB0E388972A9A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EGFloatingTextField-EGFloatingTextFieldTests/Pods-EGFloatingTextField-EGFloatingTextFieldTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B623D292BC41742181CC369C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EGFloatingTextField-EGFloatingTextFieldTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D67D4A3B68C4B04B38A69BC1 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -506,6 +590,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9CFF1B2D1F5F5C4B006FA5E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CFF1B341F5F5C4B006FA5E7 /* EGFloatingTextFieldTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B77E39781B778E880078ABA3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -531,21 +623,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B7CBFB2F1B769D1800CDE475 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B7CBFB3B1B769D1800CDE475 /* EGFloatingTextFieldTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9C21F2831D9D38DA00ED58CC /* PBXTargetDependency */ = {
+		9CFF1B381F5F5C4B006FA5E7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B77E397B1B778E880078ABA3 /* Example */;
-			targetProxy = 9C21F2821D9D38DA00ED58CC /* PBXContainerItemProxy */;
+			target = B7CBFB271B769D1700CDE475 /* EGFloatingTextField */;
+			targetProxy = 9CFF1B371F5F5C4B006FA5E7 /* PBXContainerItemProxy */;
 		};
 		B77E39921B778E880078ABA3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -556,11 +640,6 @@
 			isa = PBXTargetDependency;
 			target = B7CBFB271B769D1700CDE475 /* EGFloatingTextField */;
 			targetProxy = B77E399E1B7796290078ABA3 /* PBXContainerItemProxy */;
-		};
-		B7CBFB361B769D1800CDE475 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B7CBFB271B769D1700CDE475 /* EGFloatingTextField */;
-			targetProxy = B7CBFB351B769D1800CDE475 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -594,10 +673,59 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		9CFF1B3A1F5F5C4B006FA5E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2908B74734220596E6BD362 /* Pods-EGFloatingTextField-EGFloatingTextFieldTests.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 9P74SUU7L6;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = EGFloatingTextFieldTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rimon.hanna.EGFloatingTextFieldTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9CFF1B3B1F5F5C4B006FA5E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E40E227F9EF185953D18EBF7 /* Pods-EGFloatingTextField-EGFloatingTextFieldTests.release.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9P74SUU7L6;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = EGFloatingTextFieldTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rimon.hanna.EGFloatingTextFieldTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		B77E39991B778E880078ABA3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 626201C15C600769384054B8 /* Pods-EGFloatingTextField-Example.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9P74SUU7L6;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -616,6 +744,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 939DABB4A44F2DF15D376C71 /* Pods-EGFloatingTextField-Example.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9P74SUU7L6;
 				INFOPLIST_FILE = Example/Info.plist;
@@ -830,47 +959,18 @@
 			};
 			name = Release;
 		};
-		B7CBFB421B769D1800CDE475 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = 9P74SUU7L6;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = EGFloatingTextFieldTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				REEXPORTED_FRAMEWORK_NAMES = "";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		B7CBFB431B769D1800CDE475 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = 9P74SUU7L6;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = EGFloatingTextFieldTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				REEXPORTED_FRAMEWORK_NAMES = "";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9CFF1B391F5F5C4B006FA5E7 /* Build configuration list for PBXNativeTarget "EGFloatingTextFieldTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CFF1B3A1F5F5C4B006FA5E7 /* Debug */,
+				9CFF1B3B1F5F5C4B006FA5E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B77E39981B778E880078ABA3 /* Build configuration list for PBXNativeTarget "Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -903,15 +1003,6 @@
 			buildConfigurations = (
 				B7CBFB3F1B769D1800CDE475 /* Debug */,
 				B7CBFB401B769D1800CDE475 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B7CBFB411B769D1800CDE475 /* Build configuration list for PBXNativeTarget "EGFloatingTextFieldTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B7CBFB421B769D1800CDE475 /* Debug */,
-				B7CBFB431B769D1800CDE475 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
