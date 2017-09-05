@@ -1,14 +1,28 @@
 # Uncomment this line to define a global platform for your project
-platform :ios, '8.0'
+workspace 'EGFloatingTextField.xcworkspace'
 
-use_frameworks!
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+inhibit_all_warnings!
+
+##
+## Integrate pods with targets
+##
 
 target 'EGFloatingTextField' do
-pod 'PureLayout', '~> 2.0'
-
+    project 'EGFloatingTextField.xcodeproj'
+    pod 'PureLayout', '~> 2.0'
+    
+    target 'EGFloatingTextFieldTests' do
+    end
 end
 
-target 'EGFloatingTextFieldTests' do
 
+post_install do |installer_representation|
+    installer_representation.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            config.build_settings['ONLY_ACTIVE_ARCH'] = 'NO'
+            config.build_settings['VALID_ARCHS'] = 'armv7 arm64 armv7s'
+        end
+    end
 end
-

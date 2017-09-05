@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		22F53C0191648AC800BA57CC /* Pods_EGFloatingTextFieldTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9F858C542A41E3978498E4 /* Pods_EGFloatingTextFieldTests.framework */; };
+		3BA07635F733242043A1280B /* libPods-EGFloatingTextField.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A4CC69F854EC3199E53E29 /* libPods-EGFloatingTextField.a */; };
+		78AFDA4A72FC8FF78B848630 /* libPods-EGFloatingTextField-EGFloatingTextFieldTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7560CFF3E02ECE97725430A /* libPods-EGFloatingTextField-EGFloatingTextFieldTests.a */; };
 		9C8FC3371F504A8800C5B80C /* EGLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C8FC3351F504A8700C5B80C /* EGLocalizable.strings */; };
 		B77E39811B778E880078ABA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77E39801B778E880078ABA3 /* AppDelegate.swift */; };
 		B77E39831B778E880078ABA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77E39821B778E880078ABA3 /* ViewController.swift */; };
@@ -19,7 +21,6 @@
 		B7CBFB341B769D1800CDE475 /* EGFloatingTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7CBFB281B769D1700CDE475 /* EGFloatingTextField.framework */; };
 		B7CBFB3B1B769D1800CDE475 /* EGFloatingTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CBFB3A1B769D1800CDE475 /* EGFloatingTextFieldTests.swift */; };
 		B7CBFB451B769D8700CDE475 /* EGFloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CBFB441B769D8700CDE475 /* EGFloatingTextField.swift */; };
-		FE3C2F8B73A0FF197428B285 /* Pods_EGFloatingTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096402613A183F28F85B3A37 /* Pods_EGFloatingTextField.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,10 +55,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		096402613A183F28F85B3A37 /* Pods_EGFloatingTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EGFloatingTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		07A4CC69F854EC3199E53E29 /* libPods-EGFloatingTextField.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EGFloatingTextField.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2549C615C53E73357831297E /* Pods-EGFloatingTextField.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EGFloatingTextField.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EGFloatingTextField/Pods-EGFloatingTextField.debug.xcconfig"; sourceTree = "<group>"; };
 		2A9F858C542A41E3978498E4 /* Pods_EGFloatingTextFieldTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EGFloatingTextFieldTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		470328949347ACC3400DDC67 /* Pods-EGFloatingTextField.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EGFloatingTextField.release.xcconfig"; path = "Pods/Target Support Files/Pods-EGFloatingTextField/Pods-EGFloatingTextField.release.xcconfig"; sourceTree = "<group>"; };
+		846B04F5D236C15133E60FC6 /* Pods-EGFloatingTextField-EGFloatingTextFieldTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EGFloatingTextField-EGFloatingTextFieldTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EGFloatingTextField-EGFloatingTextFieldTests/Pods-EGFloatingTextField-EGFloatingTextFieldTests.release.xcconfig"; sourceTree = "<group>"; };
+		8571DBAD42DA66E6FF8298D2 /* Pods-EGFloatingTextField-EGFloatingTextFieldTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EGFloatingTextField-EGFloatingTextFieldTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EGFloatingTextField-EGFloatingTextFieldTests/Pods-EGFloatingTextField-EGFloatingTextFieldTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8A125C864C901795E8287234 /* Pods-EGFloatingTextFieldTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EGFloatingTextFieldTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EGFloatingTextFieldTests/Pods-EGFloatingTextFieldTests.release.xcconfig"; sourceTree = "<group>"; };
 		9C8FC3361F504A8800C5B80C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/EGLocalizable.strings; sourceTree = "<group>"; };
 		9C8FC3381F504A8D00C5B80C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/EGLocalizable.strings; sourceTree = "<group>"; };
@@ -80,6 +83,7 @@
 		B7CBFB391B769D1800CDE475 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7CBFB3A1B769D1800CDE475 /* EGFloatingTextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGFloatingTextFieldTests.swift; sourceTree = "<group>"; };
 		B7CBFB441B769D8700CDE475 /* EGFloatingTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EGFloatingTextField.swift; sourceTree = "<group>"; };
+		D7560CFF3E02ECE97725430A /* libPods-EGFloatingTextField-EGFloatingTextFieldTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EGFloatingTextField-EGFloatingTextFieldTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE3C2F8B73A0FF197428B285 /* Pods_EGFloatingTextField.framework in Frameworks */,
+				3BA07635F733242043A1280B /* libPods-EGFloatingTextField.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +115,7 @@
 			files = (
 				B7CBFB341B769D1800CDE475 /* EGFloatingTextField.framework in Frameworks */,
 				22F53C0191648AC800BA57CC /* Pods_EGFloatingTextFieldTests.framework in Frameworks */,
+				78AFDA4A72FC8FF78B848630 /* libPods-EGFloatingTextField-EGFloatingTextFieldTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,8 +125,9 @@
 		3C69B06194535337E97B6F46 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				096402613A183F28F85B3A37 /* Pods_EGFloatingTextField.framework */,
 				2A9F858C542A41E3978498E4 /* Pods_EGFloatingTextFieldTests.framework */,
+				07A4CC69F854EC3199E53E29 /* libPods-EGFloatingTextField.a */,
+				D7560CFF3E02ECE97725430A /* libPods-EGFloatingTextField-EGFloatingTextFieldTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -133,6 +139,8 @@
 				470328949347ACC3400DDC67 /* Pods-EGFloatingTextField.release.xcconfig */,
 				A2EEF67C3886C5AB4CAC0AA3 /* Pods-EGFloatingTextFieldTests.debug.xcconfig */,
 				8A125C864C901795E8287234 /* Pods-EGFloatingTextFieldTests.release.xcconfig */,
+				8571DBAD42DA66E6FF8298D2 /* Pods-EGFloatingTextField-EGFloatingTextFieldTests.debug.xcconfig */,
+				846B04F5D236C15133E60FC6 /* Pods-EGFloatingTextField-EGFloatingTextFieldTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -335,7 +343,7 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0830;
 				TargetAttributes = {
 					B77E397B1B778E880078ABA3 = {
 						CreatedOnToolsVersion = 6.4;
@@ -449,7 +457,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EGFloatingTextFieldTests/Pods-EGFloatingTextFieldTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EGFloatingTextField-EGFloatingTextFieldTests/Pods-EGFloatingTextField-EGFloatingTextFieldTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		83A477E869E149FEAFB8C7C2 /* [CP] Check Pods Manifest.lock */ = {
@@ -463,7 +471,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-EGFloatingTextFieldTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-EGFloatingTextField-EGFloatingTextFieldTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -485,7 +493,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EGFloatingTextFieldTests/Pods-EGFloatingTextFieldTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EGFloatingTextField-EGFloatingTextFieldTests/Pods-EGFloatingTextField-EGFloatingTextFieldTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BAEE52CF3F2FAF319479A8AB /* [CP] Copy Pods Resources */ = {
@@ -770,7 +778,7 @@
 			baseConfigurationReference = 2549C615C53E73357831297E /* Pods-EGFloatingTextField.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9P74SUU7L6;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -793,7 +801,7 @@
 			baseConfigurationReference = 470328949347ACC3400DDC67 /* Pods-EGFloatingTextField.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9P74SUU7L6;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -812,7 +820,7 @@
 		};
 		B7CBFB421B769D1800CDE475 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A2EEF67C3886C5AB4CAC0AA3 /* Pods-EGFloatingTextFieldTests.debug.xcconfig */;
+			baseConfigurationReference = 8571DBAD42DA66E6FF8298D2 /* Pods-EGFloatingTextField-EGFloatingTextFieldTests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 9P74SUU7L6;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -834,7 +842,7 @@
 		};
 		B7CBFB431B769D1800CDE475 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8A125C864C901795E8287234 /* Pods-EGFloatingTextFieldTests.release.xcconfig */;
+			baseConfigurationReference = 846B04F5D236C15133E60FC6 /* Pods-EGFloatingTextField-EGFloatingTextFieldTests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 9P74SUU7L6;
 				FRAMEWORK_SEARCH_PATHS = (
