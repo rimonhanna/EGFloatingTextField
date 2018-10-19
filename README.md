@@ -6,18 +6,13 @@ An implemantation of "Float Label Pattern" of Material Design in Swift programmi
 
 ## Usage
 
-EGFloatingTextField is available through [CocoaPods](http://cocoapods.org) and [Carthage](https://github.com/carthage/carthage). To install
-it, simply add the following lines to your Podfile:
+EGFloatingTextField is available through [CocoaPods](http://cocoapods.org). To install it, 
+simply add the following lines to your Podfile:
 
 ```ruby
 use_frameworks!
-pod "EGFloatingTextField"
+pod 'EGFloatingTextField', :git => 'https://github.com/rimonhanna/EGFloatingTextField.git'
 ```
-Or add the following lines to your Cartfile:
-
-```bash
-github "enisgayretli/EGFloatingTextField" "master"
-``` 
 
 ## Setup
 **Import dependency**
