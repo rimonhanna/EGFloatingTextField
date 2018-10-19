@@ -307,7 +307,7 @@ open class EGFloatingTextField: UITextField {
         }
     }
 
-    func textDidChange(_ notif: Notification) {
+    @objc func textDidChange(_ notif: Notification) {
         self.validate()
     }
 
