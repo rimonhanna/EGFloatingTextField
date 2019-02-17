@@ -457,7 +457,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-EGFloatingTextField-Example/Pods-EGFloatingTextField-Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-EGFloatingTextField-Example/Pods-EGFloatingTextField-Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -466,7 +466,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EGFloatingTextField-Example/Pods-EGFloatingTextField-Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EGFloatingTextField-Example/Pods-EGFloatingTextField-Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		229D575BCE6857A9A45703CE /* [CP] Check Pods Manifest.lock */ = {
@@ -493,7 +493,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-EGFloatingTextField-EGFloatingTextFieldTests/Pods-EGFloatingTextField-EGFloatingTextFieldTests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-EGFloatingTextField-EGFloatingTextFieldTests/Pods-EGFloatingTextField-EGFloatingTextFieldTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -502,7 +502,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EGFloatingTextField-EGFloatingTextFieldTests/Pods-EGFloatingTextField-EGFloatingTextFieldTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EGFloatingTextField-EGFloatingTextFieldTests/Pods-EGFloatingTextField-EGFloatingTextFieldTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		66F19941671D9DAACDAC80AA /* [CP] Check Pods Manifest.lock */ = {

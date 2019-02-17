@@ -1,5 +1,5 @@
 PODS:
-  - PureLayout (3.0.2)
+  - PureLayout (3.1.4)
 
 DEPENDENCIES:
   - PureLayout
@@ -9,8 +9,8 @@ SPEC REPOS:
     - PureLayout
 
 SPEC CHECKSUMS:
-  PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
+  PureLayout: f08c01b8dec00bb14a1fefa3de4c7d9c265df85e
 
 PODFILE CHECKSUM: e811f2bf68d321aecd10211249c20ee21b507130
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.0
